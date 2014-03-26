@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CustomOffice365OWA.Models.Message>
+
+@{
+    ViewBag.Title = "Mails";
+}
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.DateTimeReceived)</th>
+        <th>@Html.DisplayNameFor(model => model.From.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.Sender.Address)</th>
+        <th>@Html.DisplayNameFor(model => model.Importance)</th>
+        <th>@Html.DisplayNameFor(model => model.Subject)</th>
+        <th>@Html.DisplayNameFor(model => model.BodyPreview)</th>
+        <th>@Html.DisplayNameFor(model => model.Body.Content)</th>
+        <th>@Html.DisplayNameFor(model => model.ClassName)</th>
+        <th>@Html.DisplayNameFor(model => model.MeetingMessageType)</th>
+        <th>@Html.DisplayNameFor(model => model.IsDeliveryReceiptRequested)</th>
+        <th>@Html.DisplayNameFor(model => model.IsReadReceiptRequested)</th>
+        <th>@Html.DisplayNameFor(model => model.IsDraft)</th>
+        <th>@Html.DisplayNameFor(model => model.IsRead)</th>
+        <th>@Html.DisplayNameFor(model => model.HasAttachments)</th>
+        <th>@Html.DisplayNameFor(model => model.DateTimeSent)</th>
+        <th>@Html.DisplayNameFor(model => model.DateTimeCreated)</th>
+        <th>@Html.DisplayNameFor(model => model.LastModifiedTime)</th>                
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.DateTimeReceived)</td>
+        <th>@Html.DisplayFor(modelItem => item.From.Name)</th>
+        <th>@Html.DisplayFor(modelItem => item.Sender.Address)</th>    
+        <td>@Html.DisplayFor(modelItem => item.Importance)</td>  
+        <td>@Html.DisplayFor(modelItem => item.Subject)</td>
+        <td>@Html.DisplayFor(modelItem => item.BodyPreview)</td> 
+        <td>@Html.DisplayFor(modelItem => item.Body.Content)</td>  
+        <td>@Html.DisplayFor(modelItem => item.ClassName)</td>      
+        <td>@Html.DisplayFor(modelItem => item.MeetingMessageType)</td>
+        <td>@Html.DisplayFor(modelItem => item.IsDeliveryReceiptRequested)</td>
+        <td>@Html.DisplayFor(modelItem => item.IsReadReceiptRequested)</td>
+        <td>@Html.DisplayFor(modelItem => item.IsDraft)</td>
+        <td>@Html.DisplayFor(modelItem => item.IsRead)</td>
+        <td>@Html.DisplayFor(modelItem => item.HasAttachments)</td>
+        <td>@Html.DisplayFor(modelItem => item.DateTimeSent)</td>
+        <td>@Html.DisplayFor(modelItem => item.DateTimeCreated)</td>
+        <td>@Html.DisplayFor(modelItem => item.LastModifiedTime)</td>          
+    </tr>
+}
+</table>
